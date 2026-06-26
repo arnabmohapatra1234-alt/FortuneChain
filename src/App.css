@@ -1,0 +1,173 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY (DARK PURPLE GRADIENT) ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #1b0f2e 0%,
+    #2a145f 35%,
+    #3b1a7a 65%,
+    #241046 100%
+  );
+}
+
+/* ===== APP ===== */
+.App {
+  min-height: 100vh;
+}
+
+/* ===================================================== */
+/* ===================== NAVBAR ======================== */
+/* ===================================================== */
+
+.navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(18, 8, 38, 0.92),
+    rgba(44, 18, 90, 0.92),
+    rgba(18, 8, 38, 0.92)
+  );
+  backdrop-filter: blur(14px);
+  padding: 14px 64px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.7),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ===== BRAND (Lottery System) ===== */
+.navbar-brand {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #d8b4fe,
+    #a78bfa
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(216, 180, 254, 0.9),
+    0 0 22px rgba(167, 139, 250, 0.7);
+
+  transition: transform 0.3s ease;
+}
+
+/* Brand hover */
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+/* Brand ACTIVE (Home route fix) */
+.navbar-brand.active {
+  text-shadow:
+    0 0 14px rgba(255, 255, 255, 1),
+    0 0 28px rgba(167, 139, 250, 1),
+    0 0 45px rgba(124, 58, 237, 0.9);
+}
+
+/* ===== NAV LINKS ===== */
+.navtext {
+  color: #e9d5ff;
+  padding: 9px 22px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.navtext:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+/* ACTIVE LINK */
+.navtext.active {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  color: #ffffff;
+  box-shadow:
+    0 0 16px rgba(167, 139, 250, 0.9),
+    0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ===================================================== */
+/* ===================== BUTTONS ======================= */
+/* ===================================================== */
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* PRIMARY */
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white;
+  padding: 13px 34px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.35s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 24px rgba(167, 139, 250, 0.95),
+    0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* DANGER */
+.btn-danger {
+  background: linear-gradient(135deg, #fb7185, #ef4444);
+  color: white;
+  padding: 13px 34px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.35s ease;
+}
+
+.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 24px rgba(255, 120, 120, 0.95),
+    0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== FADE IN ===== */
+.fade-in {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,110 @@
+/* ===== PAGE CENTER ===== */
+.intro-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+}
+
+/* ===== CARD (WHITE + GLITERY SHADOW) ===== */
+.intro-card {
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  width: 420px;
+  padding: 34px 38px;
+  border-radius: 26px;
+  text-align: center;
+
+  /* whitish + purple glow shadow */
+  box-shadow:
+    0 25px 60px rgba(255, 255, 255, 0.25),
+    0 0 45px rgba(168, 139, 255, 0.55);
+
+  backdrop-filter: blur(14px);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* Card hover */
+.intro-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 35px 80px rgba(255, 255, 255, 0.35),
+    0 0 70px rgba(168, 139, 255, 0.75);
+}
+
+/* ===== ICON ===== */
+.web3-icon {
+  font-size: 44px;
+  margin-bottom: 14px;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ===== TITLE ===== */
+.intro-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== SUBTITLE ===== */
+.intro-subtitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #5b21b6;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* ===== BUTTON GROUP ===== */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+/* ===== ROLE BUTTONS ===== */
+.role-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine animation */
+.role-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.role-btn:hover::after {
+  left: 120%;
+}
+
+.role-btn:active {
+  transform: scale(0.96);
+}
+
+/* ===== WALLET NOTE ===== */
+.wallet-note {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #dc2626;
+  margin-top: 12px;
+}
